@@ -1,0 +1,30 @@
+==step 1==
+qmake -project "QT+=widgets" "QT += core-private"
+
+==step 2==
+qmake
+
+==step 3==
+Add the following text in the Makefile.Release (please change to your actual path)
+
+-If using C++ for ML- (ML_USING_CPLUSPLUS_EN true)
+
+INCPATH:
+-IC:/opencv-mingw/include -IC:/onnxruntime-win-x64-1.22.0/onnxruntime-win-x64-1.22.0/include
+
+LIBS:
+-LC:/opencv-mingw/x64/mingw/lib -LC:/onnxruntime-win-x64-1.22.0/onnxruntime-win-x64-1.22.0/lib -lopencv_core455 -lopencv_highgui455 -lopencv_imgproc455 -lopencv_imgcodecs455 -lopencv_dnn455 -lonnxruntime
+
+
+ *********
+-If using python for ML- (ML_USING_CPLUSPLUS_EN false)
+
+INCPATH:
+-IC:\msys64\mingw64\include -IC:\msys64\mingw64\include\python3.12
+
+LIBS:
+-LC:\RoboDK\Python37 -lpython37
+
+
+==step 4==
+make

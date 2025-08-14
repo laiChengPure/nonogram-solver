@@ -1,0 +1,9 @@
+.vscode
+debug
+release/*
+!release/*.dll
+.qmake.stash
+Makefile
+Makefile.Debug
+Makefile.Release
+Qt+nonogram version.pro

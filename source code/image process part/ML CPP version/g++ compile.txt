@@ -1,0 +1,1 @@
+g++ C++_ver.cpp DigitClassifier.cpp -IC:/opencv-mingw/include -IC:/onnxruntime-win-x64-1.22.0/onnxruntime-win-x64-1.22.0/include -LC:/opencv-mingw/x64/mingw/lib -LC:/onnxruntime-win-x64-1.22.0/onnxruntime-win-x64-1.22.0/lib -lopencv_core455 -lopencv_highgui455 -lopencv_imgproc455 -lopencv_imgcodecs455 -lopencv_dnn455 -lonnxruntime -o main_app.exe
